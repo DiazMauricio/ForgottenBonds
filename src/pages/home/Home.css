@@ -1,0 +1,58 @@
+/*      H E A D E R     */
+.header{
+    position: relative;
+}
+.header.background{
+    background-color: var(--surface-dark);
+    height: 100vh;
+}
+.header .conteiner{
+    grid-column: 3 / span 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header button{
+    margin: 1em;
+}
+.scrollToSeeMore{
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2em;
+    opacity: 0;
+    animation: scrollToSeeMore 1s  2s  forwards ;
+}
+
+@keyframes scrollToSeeMore {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/*      T R A M A    */
+.trama{
+    padding: 6em 0;
+}
+.trama .img1{
+    background-color: rgb(149, 149, 90);
+    grid-row: 1 / span 3;
+    grid-column: 3 / span 2;
+}
+.trama .img2{
+    grid-row: 1 / span 2;
+    grid-column: 5 / span 2;
+    background-color: rgb(147, 61, 61);
+    min-height: 250px;
+}
+.trama .text1{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+}
+.trama .text2{
+    grid-column: 5 / span 2;
+    grid-row: 3;
+}

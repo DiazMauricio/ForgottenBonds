@@ -1,0 +1,24 @@
+.Logo{
+    --logo-text: #000;
+    --logo-banner: #952B2B;
+    --logo-star: #fff;
+}
+.Logo.v2{
+    --logo-text: #fff;
+    --logo-banner: #952B2B;
+    --logo-star: #fff;
+}
+.Logo.v3{
+    --logo-text: #fff;
+    --logo-banner: #fff;
+    --logo-star: #000;
+}
+.Logo.v4{
+    --logo-text: #fff;
+    --logo-banner: #333DCC;
+    --logo-star: #fff;
+}
+
+.Logo .logo-text{ fill: var(--logo-text);}
+.Logo .logo-banner{ fill: var(--logo-banner);}
+.Logo .logo-star{ fill: var(--logo-star);}

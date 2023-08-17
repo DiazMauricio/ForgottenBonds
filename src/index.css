@@ -1,11 +1,53 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Variables */
+  /*    Color */
+  --blue-darker: #020711;
+  --blue-dark: #0f131a;
+  --blue-default: #171b22;
+  --blue-light: #22324e;
+  --blue-lighter: #637aa4;
+  --red-default: #8d1818;
+  --yellow-default: #e3b439;
+  --cyan-default: #176fa0;
+  --green-default: #7aad26;
+  --grey-darker: #1a1a1a;
+  --grey-dark: #333;
+  --grey-default: #666;
+  --grey-light: #999;
+  --grey-lighter: #fff;
+  /* Color Theme */
+  --text-default: var(--grey-lighter);
+  --text-selected: var(--yellow-default);
+  --surface-default: var(--blue-default);
+  --surface-dark: var(--blue-darker);
+  --navbar-surface: var(--surface-dark);
+  --navbar-text: var(--text-default);
+  --navbar-textselected: var(--text-selected);
+  --button-default: var(--red-default);
+  --button-default-hover: var(--cyan-default);
+  --button-default-text: var(--text-default);
+  /* Text size */
+  --text-size: 16px;
+  --text-small: 12px;
+  --text-size-6: 21.3px;
+  --text-size-5: 28.4px;
+  --text-size-4: 37.9px;
+  --text-size-3: 50.5px;
+  --text-size-2: 67.3px;
+  --text-size-1: 89.8px;
+  --text-size-button: var(--text-size);
+
+  --font-text: 'Century Gothic Paneuropean', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-titles: 'Caviar Dreams', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*  */
+  font-family: var(--font-text);
+
   line-height: 1.5;
   font-weight: 400;
-
+  font-size: var(--text-size);
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-default);
+  background-color: var(--surface-default);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,57 +55,82 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+*{
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  border: none;
+  text-decoration: none;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+button, a{
   cursor: pointer;
-  transition: border-color 0.25s;
+  color: inherit;
 }
-button:hover {
-  border-color: #646cff;
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-family: var(--font-titles) ;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.h1{
+  font-size: var(--text-size-1);
+  line-height: 1.536;
+  letter-spacing: -0.04em;
+}
+.h2{
+  font-size: var(--text-size-2);
+  letter-spacing: -0.03em;
+}
+.h3{
+  font-size: var(--text-size-3);
+  letter-spacing: -0.02em;
+}
+.h4{
+  font-size: var(--text-size-4);
+  letter-spacing: -0.02em;
+}
+.h5{
+  font-size: var(--text-size-5);
+    letter-spacing: -0.01em;
+}
+.h6{
+  font-size: var(--text-size-6);
+  letter-spacing: 0em;
+}
+.text-small{
+  font-size: var(--text-small);
+  letter-spacing: 0.1em;
+}
+button{
+  font-family: var(--font-text);
+  font-size: var(--text-size-button);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: var(--button-default);
+  color: var(--button-default-text);
+  padding: .8em 3em;
+  border-radius: 5em;
+  transition: all .3s;
+}
+button:hover{
+  background-color: var(--button-default-hover);
+}
+p{
+  padding-bottom: 1em;  
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.grid{
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  height: 100%;
+}
+ul{
+  list-style: none;
+  font-family: var(--font-text);
+  font-size: var(--text-size-button);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
