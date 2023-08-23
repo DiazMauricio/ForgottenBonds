@@ -5,7 +5,7 @@ import './Home.css';
 const Home = () => {
     return ( 
         <>
-        <NavBar/>
+        <NavBar pagina={1}/>
         <Header/>
         <Trama/>
         </>

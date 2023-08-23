@@ -1,14 +1,15 @@
 import NavBar from "../../components/navBar/NavBar";
 
 const Historia = () => {
-    return ( <div>
-        <NavBar/>
+    return ( 
+    <>
+        <NavBar pagina={5}/>
         <h1>Historia</h1>
         <h1>Historia</h1>
         <h1>Historia</h1>
         <h1>Historia</h1>
-        <h1>Historia</h1>
-    </div> );
+    </> 
+    );
 }
  
 export default Historia;

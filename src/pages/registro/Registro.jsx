@@ -1,15 +1,13 @@
+import HalfPageContainer from "../../components/HalfPageContainer/HalfPageContainer";
 import NavBar from "../../components/navBar/NavBar";
+import MapaLaiss from "../../components/svg/MapaLaiss";
 
 const Registro = () => {
     return ( 
         <>
-        <NavBar/>
-        <h1>Registro</h1>
-        <h1>Registro</h1>
-        <h1>Registro</h1>
-        <h1>Registro</h1>
-        <h1>Registro</h1>
-        <h1>Registro</h1>
+        <NavBar pagina={6}/>
+        <MapaLaiss/>
+        <HalfPageContainer/>
         </>
      );
 }

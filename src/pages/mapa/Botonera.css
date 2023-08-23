@@ -1,0 +1,27 @@
+.Botonera{
+    width: 15em;
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    right: 0;
+    margin: 1em;
+}
+.Botonera g{
+    cursor: pointer;
+}
+.Botonera .btn-arrow:hover{
+    transform: scale(1.1);
+    transform-origin: 73.5% 50%;
+}
+.Botonera .btn-arrow:active{
+    transform: scale(1.2);
+    transform-origin: 73.5% 50%;
+}
+.Botonera .btn-zoom:hover{
+    transform: scale(1.1);
+    transform-origin: 29% 75%;
+}
+.Botonera .btn-zoom:active{
+    transform: scale(1.2);
+    transform-origin: 29% 75%;
+}

@@ -9,6 +9,7 @@
   --red-default: #8d1818;
   --yellow-default: #e3b439;
   --cyan-default: #176fa0;
+  --cyan-dark: #1C3737;
   --green-default: #7aad26;
   --grey-darker: #1a1a1a;
   --grey-dark: #333;
@@ -24,6 +25,7 @@
   --navbar-text: var(--text-default);
   --navbar-textselected: var(--text-selected);
   --button-default: var(--red-default);
+  --button-small: var(--cyan-dark);
   --button-default-hover: var(--cyan-default);
   --button-default-text: var(--text-default);
   /* Text size */
@@ -110,6 +112,10 @@ button{
   padding: .8em 3em;
   border-radius: 5em;
   transition: all .3s;
+}
+.btn-small{
+  background-color: var(--button-small);
+  padding: .5em 1.5em;
 }
 button:hover{
   background-color: var(--button-default-hover);

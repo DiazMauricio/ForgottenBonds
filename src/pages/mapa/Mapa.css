@@ -1,0 +1,85 @@
+.MapaPage{
+    height: calc(100vh - 4em);
+    padding-top: 4em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.Map-container{
+    transition: width .5s  ease-in-out;
+    transition-delay: .4s;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.active > .Map-container{
+    width: 50%;
+    transition-delay: 0s;
+} 
+.Map-container > .toggleBtn{
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    top: 2.5em;
+    right: 0;
+    z-index: 100;
+    padding: 1em;
+    cursor:pointer;
+    background-color: var(--surface-default);
+    overflow: hidden;
+
+}
+.toggleBtn:hover{
+    background-color: var(--surface-dark);
+}
+
+
+.toggleBtn-svgcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transform: translateY(-2.5em);
+    transition: transform .2s;
+}
+.active .toggleBtn-svgcontainer{
+    transform: translateY(0);
+}
+.mapControler{
+    position: absolute;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 4em 4em 4em;
+    gap: .5em;
+    bottom: 1em;
+    margin: 1em;
+}
+.mapControler button:nth-child(1){
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.mapControler button:nth-child(2){
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+.mapControler button:nth-child(3){
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.mapControler button:nth-child(4){
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+.mapControler button:nth-child(5){
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.mapControler button:nth-child(6){
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.mapControler p:nth-child(7){
+    position: absolute;
+    width: 30em;
+    top: -3em;
+}
