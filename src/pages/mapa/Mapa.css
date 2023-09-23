@@ -5,19 +5,20 @@
     position: relative;
     overflow: hidden;
 }
-.Map-container{
+.controller-container{
     transition: width .5s  ease-in-out;
     transition-delay: .4s;
     height: 100%;
     width: 100%;
     overflow: hidden;
     position: relative;
+    cursor: all-scroll;
 }
-.active > .Map-container{
+.active > .controller-container{
     width: 50%;
     transition-delay: 0s;
 } 
-.Map-container > .toggleBtn{
+.controller-container > .toggleBtn{
     position: absolute;
     height: 1.5em;
     width: 1.5em;

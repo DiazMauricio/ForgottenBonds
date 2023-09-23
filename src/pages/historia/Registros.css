@@ -1,0 +1,39 @@
+.registros .registro:last-child .line{
+    height: 2em;
+    
+}
+
+.registros{
+    z-index: -1;
+    grid-template-columns: 1fr;
+    --line-color: var(--grey-lighter);
+}
+.registros .circle{
+    width: 16px;
+    height: 16px;
+    background-color: var(--line-color);
+    border-radius: 100%;
+}
+.registros .line{
+    height: 100%;
+    width: 2px;
+    margin-left: 7px;
+    background-color: var(--line-color);
+}
+.registros .subtitle{
+    color: var(--line-color);
+}
+.registros .header{
+    display: flex;
+    gap: 10px;
+    grid-column: span 2;
+}
+.registros .text{
+    gap: 10px;
+    grid-column: 3 / span 4;
+    padding-bottom: 2em;
+}
+.HistoriaPage .h2{
+    margin: 1.5em 0;
+    margin-bottom: 0.5em;
+}

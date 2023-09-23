@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import MapaLaiss from "../../components/svg/MapaLaiss";
 import Botonera from "./Botonera";
 
 var defaultViewBox = {
@@ -13,15 +12,15 @@ let newPosition = { x: 0, y: 0}
 const clamp = (num, min, max) =>Math.min(Math.max(num, min), max)
 
 
-const MapController = ({children, vBox, useVBox }) => {
+const MapController = ({children, vBox, useVBox, normalViewBox=defaultViewBox, btns=true, cursorEvents=true }) => {
     const [mouseHold, useMouseHold] = useState(false);
     const mapRef = useRef();
 
     const calculateBorders = () => {
         let divWidth = mapRef.current.clientWidth;
         let divHeight = mapRef.current.clientHeight;
-        let x = defaultViewBox.width - ((vBox.height/ divHeight) * divWidth)
-        let y = defaultViewBox.height - ((vBox.width / divWidth) * divHeight)
+        let x = normalViewBox.width - ((vBox.height/ divHeight) * divWidth)
+        let y = normalViewBox.height - ((vBox.width / divWidth) * divHeight)
 
         let vBoxAspecRatio = vBox.width / vBox.height;
         let divAspecRatio = divWidth / divHeight
@@ -30,13 +29,13 @@ const MapController = ({children, vBox, useVBox }) => {
 
         if (divAspecRatio > vBoxAspecRatio){
             return({
-                x: defaultViewBox.width - vBox.width,
+                x: normalViewBox.width - vBox.width,
                 y
             })
         }
         return({
             x , 
-            y: defaultViewBox.height - vBox.height
+            y: normalViewBox.height - vBox.height
         })
     }
 
@@ -52,22 +51,22 @@ const MapController = ({children, vBox, useVBox }) => {
 
     const ZoomMap = (z) => {
         let zoom = z;
-        
-        let aspecRatio = defaultViewBox.width / defaultViewBox.height;
+
+        let aspecRatio = normalViewBox.width / normalViewBox.height;
         let minSize = {
-            width: defaultViewBox.width - 250 * aspecRatio * 6,
-            height: defaultViewBox.height - 250 * 6
+            width: normalViewBox.width - 250 * aspecRatio * 5,
+            height: normalViewBox.height - 250 * 5
         }
 
-        let newWidth = clamp(vBox.width + zoom * aspecRatio, minSize.width, defaultViewBox.width);
-        let newHeight = clamp(vBox.height + zoom, minSize.height, defaultViewBox.height);
+        let newWidth = clamp(vBox.width + zoom * aspecRatio, minSize.width, normalViewBox.width);
+        let newHeight = clamp(vBox.height + zoom, minSize.height, normalViewBox.height);
 
         if(newWidth === vBox.width){
             return
         }
 
-        let newX = clamp(vBox.x - (zoom * aspecRatio)/2, 0, defaultViewBox.width - newWidth)
-        let newY = clamp(vBox.y - zoom/2, 0, defaultViewBox.height- newHeight);
+        let newX = clamp(vBox.x - (zoom * aspecRatio)/2, 0, normalViewBox.width - newWidth)
+        let newY = clamp(vBox.y - zoom/2, 0, normalViewBox.height- newHeight);
 
         var newViewBox = {
             ...vBox,
@@ -81,6 +80,7 @@ const MapController = ({children, vBox, useVBox }) => {
 
 
     const MapScrollEvent = (e) => {
+        if (!cursorEvents) return;
         ZoomMap(e.deltaY);
     }
 
@@ -108,16 +108,15 @@ const MapController = ({children, vBox, useVBox }) => {
 
     return ( 
         <div ref={mapRef} 
-            className="Map-container"
+            className="controller-container"
             onWheel={MapScrollEvent} 
             onPointerDown={MapMouseDown} 
             onPointerMove={MapMouseOver} 
             onPointerLeave={MapClear} 
             onPointerUp={MapClear}
         >
-            <Botonera Move={MoveMap} Zoom={ZoomMap}/>
+            { btns && <Botonera Move={MoveMap} Zoom={ZoomMap}/> }
             {children}
-            <MapaLaiss vbox={vBox}/>
         </div>
      );
 }

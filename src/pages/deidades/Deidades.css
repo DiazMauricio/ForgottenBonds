@@ -1,0 +1,107 @@
+.Deidades .header{
+    background-color: var(--surface-dark);
+    padding: 6em 0 3em;
+}
+.Deidades .header h1{
+    grid-column: 1 / span 4;
+}
+.Deidades .header p{
+    grid-column: 1 / span 4;
+}
+.Deidades .header .Icons{
+    grid-column: 1;
+    display: flex;
+    height: 4rem;
+    gap: 1em;
+}
+.GodSection .colored, .GodSection b{
+    color: var(--god-color);
+}
+.GodSection .GodSection-header{
+    background-color: var(--grey-darker);
+    padding:  0;
+    position: relative;
+    overflow: hidden;
+}
+.GodSection-header-container{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.GodSection-header-container .fc-1{
+    flex: 1;
+    min-width: min(500px, 100%);
+}
+.GodSection-header .BordeDeidad{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: 0;
+}
+.GodSection-header .BordeDeidad:nth-child(2){
+    right: 0;
+    transform: scaleX(-1);
+}
+.god-name .BordeDeidad{
+    display: none;
+    position: absolute;
+    left: 0;
+    background: none !important;
+}
+.god-name .BordeDeidad:nth-child(2){
+    right: 0;
+    left: inherit;
+    transform: scaleX(-1);
+}
+.GodSection .god-name{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 4rem 0;
+}
+.GodSection .god-name *{
+    background-color: var(--grey-darker);
+}
+.GodSection .god-name .IconDeidad{
+    height: 15em;
+}
+
+.GodSection .credo{
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: var(--grey-darker);
+  padding: 2rem 0;
+  z-index: 1;
+}
+.GodSection .credo p{
+    max-width: min(500px, 100%);
+    padding: 0 2rem;
+    margin: 1rem auto;
+}
+.GodSection .info{
+    padding: 4em 0;
+}
+.GodSection .votos{
+    grid-column: 5 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.GodSection .votos p{
+    background-color: var(--grey-darker);
+    padding: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .GodSection-header > .BordeDeidad{
+        display: none;
+    }
+    .god-name .BordeDeidad{
+        display: inherit;
+    }
+}

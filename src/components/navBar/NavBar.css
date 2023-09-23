@@ -1,7 +1,7 @@
 .navbar-container{
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 200;
     height: 0;
 }
 .navbar{
@@ -9,12 +9,12 @@
     height: 4em;
     position: relative;
 }
-.navbar ul{
+.navbar  ul{
     height: 100%;
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
-    gap: 2em;
+    gap: 2rem;
     align-items: center;
 }
 .navbar .logo-container{
@@ -28,9 +28,57 @@
     cursor: pointer;
     padding: 0 5px;
 }
-.navbar li:hover{
+.navbar-container   li:hover{
     color: var(--text-selected);
 }
-.navbar .selected{
+.navbar-container  .selected{
     color: var(--text-selected);
+}
+.BurguerIcon{
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 1rem;
+    border-radius: 0;
+    transition: .3s d;
+
+}
+.BurguerIcon:hover{
+    background: none;
+}
+.BurguerIcon.show path{
+    d: path("M24.7791 22.2435L8.71678 6.18123L5.18124 9.71676L21.2435 25.779L5.18126 41.8413L8.71679 45.3768L24.7791 29.3146L40.8413 45.3768L44.3769 41.8413L28.3146 25.779L44.3769 9.71676L40.8413 6.18123L24.7791 22.2435Z")
+}
+
+.navbar-desplegable.show{
+    display: inherit;
+}
+
+.navbar-desplegable{
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 4rem 2rem;
+    top: 3rem;
+    background-color: var(--surface-dark);
+}
+.navbar-desplegable ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar li {
+        display: none;
+    }
+    .BurguerIcon{
+        display: inherit;
+    }
 }

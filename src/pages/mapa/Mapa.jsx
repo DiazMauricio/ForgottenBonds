@@ -1,13 +1,16 @@
 import { useState } from "react";
-import HalfPageContainer from "../../components/HalfPageContainer/HalfPageContainer";
-import NavBar from "../../components/navBar/NavBar";
 import { Ciudades } from "./Ciudades";
-import "./Mapa.css"
+import HalfPageContainer from "../../components/HalfPageContainer/HalfPageContainer";
 import MapController from "./MapController";
+import NavBar from "../../components/navBar/NavBar";
+import "./Mapa.css"
+import Compas from "../../components/svg/Compas";
+import LaissShield from "../../components/svg/LaissShield";
+import MapaLaiss from "../../components/svg/MapaLaiss";
 
 const defaultViewBox = {
   x: 0,
-  y: 0,
+  y: 200,
   width: 4000,
   height: 2000
 };
@@ -43,7 +46,10 @@ const Mapa = () => {
         <NavBar pagina={2}/>
         <div className={"MapaPage " + (showInfo? "active": "")}>
             <MapController vBox={vBox} useVBox={useVBox}>
+                <LaissShield active={vBox.width > 3000}/>
                 <ToggleBtn onClick={toggleInfo}/>
+                <Compas />
+                <MapaLaiss vbox={vBox}/>
             </MapController>
             <HalfPageContainer Content={Ciudades[ciudad].ciudad} ChangeContent={ChangeContent}/>
         </div>

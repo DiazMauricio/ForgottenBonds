@@ -1,0 +1,10 @@
+.LaissShield{
+    position: absolute;
+    height: max(15em, 40vh);
+    margin: 0 1em ;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.LaissShield.active{
+    opacity: 1;
+}

@@ -3,7 +3,7 @@ import NavBar from './components/navBar/NavBar'
 import Home from './pages/home/home'
 import {Route , Routes} from "react-router-dom"
 import Mapa from './pages/mapa/Mapa'
-import Registro from './pages/registro/Registro'
+import Bitacora from './pages/bitacora/Bitacora'
 
 function App() {
 
@@ -14,10 +14,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/mapa' element={<Mapa />} />
-        <Route path='/registro' element={<Registro />} />
+        <Route path='/bitacora' element={<Bitacora />} />
       </Routes>
     </div>
-    {/* <Home/> */}
     </>
   )
 }

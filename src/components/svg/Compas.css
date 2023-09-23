@@ -1,0 +1,24 @@
+.Compas{
+    position: absolute;
+    height: 6em;
+    margin: 1em;
+    bottom: 0;
+    animation: Compas 10s ease-in-out  infinite;
+}
+@keyframes Compas {
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+}
