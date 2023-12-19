@@ -5,8 +5,15 @@
 
 .registros{
     z-index: -1;
-    grid-template-columns: 1fr;
     --line-color: var(--grey-lighter);
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.registros > h2{
+    margin: 0 2rem;
 }
 .registros .circle{
     width: 16px;
@@ -20,20 +27,58 @@
     margin-left: 7px;
     background-color: var(--line-color);
 }
-.registros .subtitle{
+.registro {
+    display: flex;
+
+}
+.registro .title{
+    width: 600px;
+    min-width: 300px;
+    margin: 0 1rem;
+}
+.registro .subtitle{
     color: var(--line-color);
 }
-.registros .header{
+.registro .header{
     display: flex;
-    gap: 10px;
-    grid-column: span 2;
+    gap: 1rem;
 }
-.registros .text{
+.registro .text{
     gap: 10px;
-    grid-column: 3 / span 4;
     padding-bottom: 2em;
+    margin: 0 1rem;
+    position: relative;
+}
+.registro .text .point{
+    margin-left: 1.5rem;
+}
+.registro .text .point::before{
+    content: "";
+    position: absolute;
+    width: .5rem;
+    height: .2rem;
+    background-color: #fff;
+    border-radius: .1rem;
+    left: 0rem;
+    margin-top: .7rem;
 }
 .HistoriaPage .h2{
     margin: 1.5em 0;
     margin-bottom: 0.5em;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .registros {
+        margin: 0 1rem;
+
+    }
+}
+@media only screen and (max-width: 800px) {
+    .registro .title{
+        width: inherit;
+    }
+    .registro .header{
+        flex-direction: column;
+    }
 }

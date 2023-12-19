@@ -1,14 +1,19 @@
 .HistoriaPage .mapContainer{
     width: 100%;
     aspect-ratio: 4300/1500;
-    position: sticky;
+    /* position: sticky; */
     display: block;
-    top: 0;
+    top: 3em;
     z-index: 50;
-    transition: aspect-ratio .5s;
-
 }
-.HistoriaPage .mapContainer.short{
+/* .HistoriaPage .mapContainer.short{
     width: 100%;
-    aspect-ratio: 4300/750;
+    aspect-ratio: 4300/500;
+} */
+
+
+@media only screen and (max-width: 800px) {
+    .grid{
+      grid-template-columns: repeat(3, 1fr);
+    }    
 }

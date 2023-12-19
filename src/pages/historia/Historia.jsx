@@ -1,4 +1,4 @@
-import { useEffect, useState,  useRef  } from "react";
+import { useState } from "react";
 import NavBar from "../../components/navBar/NavBar";
 import MapaGlobal from "../../components/svg/MapaGobla";
 import MapController from "../mapa/MapController";
@@ -18,7 +18,9 @@ const Historia = () => {
     const [shortMap, useShortMap] = useState(false)
 
     const onWheel = (e) =>{
-        useShortMap((current)=> window.scrollY > 10);
+        if (shortMap != window.scrollY > 10){
+            useShortMap(()=> window.scrollY > 10);
+        }
     }
     return ( 
     <div className="HistoriaPage" onWheel={onWheel}>

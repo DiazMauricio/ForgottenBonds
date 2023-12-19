@@ -10,7 +10,7 @@ import MapaLaiss from "../../components/svg/MapaLaiss";
 
 const defaultViewBox = {
   x: 0,
-  y: 200,
+  y: 0,
   width: 4000,
   height: 2000
 };

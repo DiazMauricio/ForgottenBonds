@@ -87,7 +87,12 @@ const MapController = ({children, vBox, useVBox, normalViewBox=defaultViewBox, b
     const MapMouseDown = (e) =>{
         e.preventDefault()
         useMouseHold(true);
-        pivot={ x: e.clientX, y: e.clientY }
+        if (e.targetTouches){
+            pivot={ x: e.targetTouches[0].clientX, y: e.targetTouches[0].clientY }
+        }
+        else{
+            pivot={ x: e.clientX, y: e.clientY }
+        }
     }
     const MapClear = (e) =>{
         e.preventDefault();
@@ -98,11 +103,27 @@ const MapController = ({children, vBox, useVBox, normalViewBox=defaultViewBox, b
         e.stopPropagation();
         e.preventDefault();
 
-        newPosition.x = pivot.x - e.clientX ;
-        newPosition.y = pivot.y - e.clientY;
+        // newPosition.x = pivot.x - e.clientX ;
+        // newPosition.y = pivot.y - e.clientY;
+
+        if (e.targetTouches){
+            newPosition.x = pivot.x - e.targetTouches[0].clientX ;
+            newPosition.y = pivot.y - e.targetTouches[0].clientY;
+        }
+        else{
+            newPosition.x = pivot.x - e.clientX ;
+            newPosition.y = pivot.y - e.clientY;
+        }
 
         MoveMap(newPosition.x, newPosition.y);
-        pivot = {x:e.clientX,y:e.clientY}
+
+        if (e.targetTouches){
+            pivot = {x:e.targetTouches[0].clientX,y:e.targetTouches[0].clientY}
+        }
+        else{
+            pivot = {x:e.clientX,y:e.clientY}
+        }
+        
 
     }
 
