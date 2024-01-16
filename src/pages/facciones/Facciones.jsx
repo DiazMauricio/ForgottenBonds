@@ -7,7 +7,7 @@ const Facciones = () => {
     <div className="FaccionesPage">
         <NavBar pagina={3}/>
         <Header/>
-        <div className="facciones-container grid">
+        <div className="facciones-container">
             
             <Faccion 
                 style="corona"
@@ -83,7 +83,8 @@ export default Facciones;
 
 const Faccion = ({style, text, children, Banner}) => {
     return ( 
-        <div className="faccion" style={{"background": "var(--"+style+"-background"}}>
+        // <div className="faccion" style={{"background": "var(--"+style+"-background"}}>
+        <div className="faccion">
             <Banner/>
             <div className="title" style={{"color": "var(--"+style+"-text"}}>
                 {children}

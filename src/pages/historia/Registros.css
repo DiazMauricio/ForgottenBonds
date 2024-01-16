@@ -1,6 +1,5 @@
 .registros .registro:last-child .line{
     height: 2em;
-    
 }
 
 .registros{
@@ -10,7 +9,6 @@
     flex-direction: column;
     max-width: 1200px;
     margin: auto;
-    
 }
 .registros > h2{
     margin: 0 2rem;
@@ -29,11 +27,10 @@
 }
 .registro {
     display: flex;
-
 }
 .registro .title{
     width: 600px;
-    min-width: 300px;
+    min-width: 270px;
     margin: 0 1rem;
 }
 .registro .subtitle{
@@ -71,7 +68,6 @@
 @media only screen and (max-width: 1200px) {
     .registros {
         margin: 0 1rem;
-
     }
 }
 @media only screen and (max-width: 800px) {
