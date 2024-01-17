@@ -52,9 +52,11 @@ const GodSectionHeader = ({Icon, god, children, Border, subtitle="a"}) =>{
                 <div className="god-name fc-1">
                     <Border />
                     <Border />
-                    <Icon />
-                    <h2 className="h1 colored">{god}</h2>
-                    <p className="subtitle colored">{subtitle}</p>
+                    <div className="GodSection-header-name">
+                        <Icon />
+                        <h2 className="h1 colored">{god}</h2>
+                        <p className="subtitle colored">{subtitle}</p>
+                    </div>
                 </div>
                 <div className="credo fc-1">
                     {children}
@@ -136,19 +138,25 @@ const SeccionDeiken = () =>{
             <GodSectionInfo>
                 <div className="texto col-3">
                     <h3 className="h5 colored">Seguidores de {god}</h3>
-                    <p className="colored">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis tenetur dolorum sequi iste sit est quibusdam! Veniam, voluptates, officia est fuga ratione alias facere dolorem maxime facilis, vero odio reiciendis?</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab corporis hic sint voluptatum atque dolorum! Temporibus distinctio saepe ab illo, est id rem et. Optio ipsa iusto ducimus omnis repellendus!</p>
-                    <h4 className="h6 colored">Iglesias de {god}</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sequi, culpa nesciunt quaerat, sapiente dignissimos, laudantium accusamus impedit deserunt qui ipsum voluptatum est. Commodi, aliquid ducimus. Numquam similique recusandae ex.</p>
-                    <h4 className="h6 colored">Convicciones</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore facere, laudantium esse consequatur maxime odit quibusdam ducimus ea. Quisquam esse eius voluptatibus nesciunt eveniet quos odit a animi totam.</p>
+                    <p className="colored">Los seguidores de Alana creen en encontrar la felicidad a través de romper las cadenas que aprisionan tu espíritu sean reales o metafóricas. Creen que en el mundo todos nacen libres y hasta que vendemos nuestra libertad por nuestra seguridad pero es nuestro deber el encontrarla una vez mas y reclamarla para encontrar nuestro verdadero potencial. </p>
+                    <p>Puede parecer que los seguidores de Alana solo se preocupan por sus propios deseos, y algunos lo hacen, pero la mayoría de seguidores tienen un fuerte sentido de comunidad, ayudando a personas desamparadas y luchando contra la opresión de sectores de la sociedad. En el mundo ideal de los que siguen Alana, nadie esta por encima de los otro y todos cuentan con las mismas oportunidades para luchar por si mismo.</p>
+                    <p>Alana ayuda a aquellos que luchan por su libertad y la de los demás, aquellos que luchan por su sueños y los que inspiran los corazones de la gente que los rodea. En la religión de Alana todos son bienvenidos, no hay reglas ni condiciones, tu único deber es encontrar lo que te hace sentir libre.</p>
+                    <p>La fe a Alana se profesa a través del arte, ya sea a través de espectáculos en sus templo o por devotos viajeros que llevan su música y sus obras a donde la gente necesite escucharla. </p>
+                    <h4 className="h6 colored">Templos de {god}</h4>
+                    <p>Los templos de Alana son los menos constantes de todos los templos, a menudo simulando una amalgama de distintos edificios puestos en un solo, combinando distintos estilos artísticos y materiales que de alguna forma tienen sentido juntos. La mayoría de los templos suelen ser humildes en su interior con suelos de tierra cubierto de alfombras pero con sus paredes y pasillos cubiertos hasta el techo de piezas de arte, telas, vidríales y artesanías. Cualquiera puede tomar o poner cualquier cosa en el templo mientras no lo dañe, y esta norma convierte a los Templos de Alana en un canal de expresión para la comunidad a la que sirve. </p>
+                    <p>Cada Templo cuenta con escenario donde un sacerdote cumple el rol de director y tiene su propio acto en que participan los demás miembros del templo y voluntarios de la comunidad. Los miembros del templo colaboran para evitar robos y violencia dentro del templo, a menudo dando dinero y trabajo a quien lo necesite.</p>
                 </div>
-                <GodSectionVotos>
-                     <p><b>Bueno</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Malvado</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Legal</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Caótico</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                </GodSectionVotos>
+                <div className="texto col-3">
+                    <h4 className="h6 colored">Convicciones</h4>
+                    <h4 className="h6">Expresión y Libertad</h4>
+                    <p>Para Alana la libertad de vivir es lo mas importante, como seguidor deberás buscar aquellas cosas que te retienen de ser tu mismo y combatirlas. Tu voz fue hecha para ser escuchada, tus manos se hicieron para crear, tu expresión es la la huella que dejas en mundo, es testimonio de tu vida y tus creencias, y uno no puede aprender crecer si antes no construye un reflejo de si mismo.</p>
+                    <GodSectionVotos>
+                        <p><b>Bueno</b><br/>Mi enemigo es la opresión y luchare pues soy mas de lo que pueden quitarme, mi libertad esta en el bienestar de los que comparten su mundo con los demás. </p>
+                        <p><b>Legal</b><br/>Ninguna voz debe ser forzada a silenciarse, Ninguna alma debe ser encerrada. Defenderé la libertad hasta del que no la merezca. </p>
+                        <p><b>Caótico</b><br/>Nadie pondrá cadenas sobre mi ni decidirá mi destino, en mi rebeldía se me mostrara mi verdadero ser, en mi debilidad no me arrodillare ante nadie. </p>
+                        <p><b>Malvado</b><br/>El mundo fue hecho para que persiga mis deseos, en mi libertad conquistare lo inalcanzable y ninguna palabra tendrá poder sobre mi. </p>
+                    </GodSectionVotos>
+                </div>
             </GodSectionInfo>
         </GodSection>
     )
@@ -165,19 +173,25 @@ const SeccionUtena = () =>{
             <GodSectionInfo>
                 <div className="texto col-3">
                     <h3 className="h5 colored">Seguidores de {god}</h3>
-                    <p className="colored">Los seguidores de Eko priorizan sus vínculos con otros seres por sobre todo lo demás, ellos dedican su vida a buscar y proteger otros con los cuales sobrevivir.</p>
-                    <p>Al centrarse en la sobrevivencia del grupo, ellos desarrollan un fuerte sentido de la justicia ya que creen que orden de mantener la estabilidad de grupo es importante que cada individuo de este sea tratado igual.</p>
-                    <h4 className="h6 colored">Iglesias de {god}</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sequi, culpa nesciunt quaerat, sapiente dignissimos, laudantium accusamus impedit deserunt qui ipsum voluptatum est. Commodi, aliquid ducimus. Numquam similique recusandae ex.</p>
-                    <h4 className="h6 colored">Convicciones</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore facere, laudantium esse consequatur maxime odit quibusdam ducimus ea. Quisquam esse eius voluptatibus nesciunt eveniet quos odit a animi totam.</p>
+                    <p className="colored">Los seguidores de Alana creen en encontrar la felicidad a través de romper las cadenas que aprisionan tu espíritu sean reales o metafóricas. Creen que en el mundo todos nacen libres y hasta que vendemos nuestra libertad por nuestra seguridad pero es nuestro deber el encontrarla una vez mas y reclamarla para encontrar nuestro verdadero potencial. </p>
+                    <p>Puede parecer que los seguidores de Alana solo se preocupan por sus propios deseos, y algunos lo hacen, pero la mayoría de seguidores tienen un fuerte sentido de comunidad, ayudando a personas desamparadas y luchando contra la opresión de sectores de la sociedad. En el mundo ideal de los que siguen Alana, nadie esta por encima de los otro y todos cuentan con las mismas oportunidades para luchar por si mismo.</p>
+                    <p>Alana ayuda a aquellos que luchan por su libertad y la de los demás, aquellos que luchan por su sueños y los que inspiran los corazones de la gente que los rodea. En la religión de Alana todos son bienvenidos, no hay reglas ni condiciones, tu único deber es encontrar lo que te hace sentir libre.</p>
+                    <p>La fe a Alana se profesa a través del arte, ya sea a través de espectáculos en sus templo o por devotos viajeros que llevan su música y sus obras a donde la gente necesite escucharla. </p>
+                    <h4 className="h6 colored">Templos de {god}</h4>
+                    <p>Los templos de Alana son los menos constantes de todos los templos, a menudo simulando una amalgama de distintos edificios puestos en un solo, combinando distintos estilos artísticos y materiales que de alguna forma tienen sentido juntos. La mayoría de los templos suelen ser humildes en su interior con suelos de tierra cubierto de alfombras pero con sus paredes y pasillos cubiertos hasta el techo de piezas de arte, telas, vidríales y artesanías. Cualquiera puede tomar o poner cualquier cosa en el templo mientras no lo dañe, y esta norma convierte a los Templos de Alana en un canal de expresión para la comunidad a la que sirve. </p>
+                    <p>Cada Templo cuenta con escenario donde un sacerdote cumple el rol de director y tiene su propio acto en que participan los demás miembros del templo y voluntarios de la comunidad. Los miembros del templo colaboran para evitar robos y violencia dentro del templo, a menudo dando dinero y trabajo a quien lo necesite.</p>
                 </div>
-                <GodSectionVotos>
-                     <p><b>Bueno</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Malvado</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Legal</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Caótico</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                </GodSectionVotos>
+                <div className="texto col-3">
+                    <h4 className="h6 colored">Convicciones</h4>
+                    <h4 className="h6">Expresión y Libertad</h4>
+                    <p>Para Alana la libertad de vivir es lo mas importante, como seguidor deberás buscar aquellas cosas que te retienen de ser tu mismo y combatirlas. Tu voz fue hecha para ser escuchada, tus manos se hicieron para crear, tu expresión es la la huella que dejas en mundo, es testimonio de tu vida y tus creencias, y uno no puede aprender crecer si antes no construye un reflejo de si mismo.</p>
+                    <GodSectionVotos>
+                        <p><b>Bueno</b><br/>Mi enemigo es la opresión y luchare pues soy mas de lo que pueden quitarme, mi libertad esta en el bienestar de los que comparten su mundo con los demás. </p>
+                        <p><b>Legal</b><br/>Ninguna voz debe ser forzada a silenciarse, Ninguna alma debe ser encerrada. Defenderé la libertad hasta del que no la merezca. </p>
+                        <p><b>Caótico</b><br/>Nadie pondrá cadenas sobre mi ni decidirá mi destino, en mi rebeldía se me mostrara mi verdadero ser, en mi debilidad no me arrodillare ante nadie. </p>
+                        <p><b>Malvado</b><br/>El mundo fue hecho para que persiga mis deseos, en mi libertad conquistare lo inalcanzable y ninguna palabra tendrá poder sobre mi. </p>
+                    </GodSectionVotos>
+                </div>
             </GodSectionInfo>
         </GodSection>
     )
@@ -192,19 +206,25 @@ const SeccionRelho = () =>{
             <GodSectionInfo>
                 <div className="texto col-3">
                     <h3 className="h5 colored">Seguidores de {god}</h3>
-                    <p className="colored">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis tenetur dolorum sequi iste sit est quibusdam! Veniam, voluptates, officia est fuga ratione alias facere dolorem maxime facilis, vero odio reiciendis?</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab corporis hic sint voluptatum atque dolorum! Temporibus distinctio saepe ab illo, est id rem et. Optio ipsa iusto ducimus omnis repellendus!</p>
-                    <h4 className="h6 colored">Iglesias de {god}</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sequi, culpa nesciunt quaerat, sapiente dignissimos, laudantium accusamus impedit deserunt qui ipsum voluptatum est. Commodi, aliquid ducimus. Numquam similique recusandae ex.</p>
-                    <h4 className="h6 colored">Convicciones</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore facere, laudantium esse consequatur maxime odit quibusdam ducimus ea. Quisquam esse eius voluptatibus nesciunt eveniet quos odit a animi totam.</p>
+                    <p className="colored">Los seguidores de Alana creen en encontrar la felicidad a través de romper las cadenas que aprisionan tu espíritu sean reales o metafóricas. Creen que en el mundo todos nacen libres y hasta que vendemos nuestra libertad por nuestra seguridad pero es nuestro deber el encontrarla una vez mas y reclamarla para encontrar nuestro verdadero potencial. </p>
+                    <p>Puede parecer que los seguidores de Alana solo se preocupan por sus propios deseos, y algunos lo hacen, pero la mayoría de seguidores tienen un fuerte sentido de comunidad, ayudando a personas desamparadas y luchando contra la opresión de sectores de la sociedad. En el mundo ideal de los que siguen Alana, nadie esta por encima de los otro y todos cuentan con las mismas oportunidades para luchar por si mismo.</p>
+                    <p>Alana ayuda a aquellos que luchan por su libertad y la de los demás, aquellos que luchan por su sueños y los que inspiran los corazones de la gente que los rodea. En la religión de Alana todos son bienvenidos, no hay reglas ni condiciones, tu único deber es encontrar lo que te hace sentir libre.</p>
+                    <p>La fe a Alana se profesa a través del arte, ya sea a través de espectáculos en sus templo o por devotos viajeros que llevan su música y sus obras a donde la gente necesite escucharla. </p>
+                    <h4 className="h6 colored">Templos de {god}</h4>
+                    <p>Los templos de Alana son los menos constantes de todos los templos, a menudo simulando una amalgama de distintos edificios puestos en un solo, combinando distintos estilos artísticos y materiales que de alguna forma tienen sentido juntos. La mayoría de los templos suelen ser humildes en su interior con suelos de tierra cubierto de alfombras pero con sus paredes y pasillos cubiertos hasta el techo de piezas de arte, telas, vidríales y artesanías. Cualquiera puede tomar o poner cualquier cosa en el templo mientras no lo dañe, y esta norma convierte a los Templos de Alana en un canal de expresión para la comunidad a la que sirve. </p>
+                    <p>Cada Templo cuenta con escenario donde un sacerdote cumple el rol de director y tiene su propio acto en que participan los demás miembros del templo y voluntarios de la comunidad. Los miembros del templo colaboran para evitar robos y violencia dentro del templo, a menudo dando dinero y trabajo a quien lo necesite.</p>
                 </div>
-                <GodSectionVotos>
-                     <p><b>Bueno</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Malvado</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Legal</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Caótico</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                </GodSectionVotos>
+                <div className="texto col-3">
+                    <h4 className="h6 colored">Convicciones</h4>
+                    <h4 className="h6">Expresión y Libertad</h4>
+                    <p>Para Alana la libertad de vivir es lo mas importante, como seguidor deberás buscar aquellas cosas que te retienen de ser tu mismo y combatirlas. Tu voz fue hecha para ser escuchada, tus manos se hicieron para crear, tu expresión es la la huella que dejas en mundo, es testimonio de tu vida y tus creencias, y uno no puede aprender crecer si antes no construye un reflejo de si mismo.</p>
+                    <GodSectionVotos>
+                        <p><b>Bueno</b><br/>Mi enemigo es la opresión y luchare pues soy mas de lo que pueden quitarme, mi libertad esta en el bienestar de los que comparten su mundo con los demás. </p>
+                        <p><b>Legal</b><br/>Ninguna voz debe ser forzada a silenciarse, Ninguna alma debe ser encerrada. Defenderé la libertad hasta del que no la merezca. </p>
+                        <p><b>Caótico</b><br/>Nadie pondrá cadenas sobre mi ni decidirá mi destino, en mi rebeldía se me mostrara mi verdadero ser, en mi debilidad no me arrodillare ante nadie. </p>
+                        <p><b>Malvado</b><br/>El mundo fue hecho para que persiga mis deseos, en mi libertad conquistare lo inalcanzable y ninguna palabra tendrá poder sobre mi. </p>
+                    </GodSectionVotos>
+                </div>
             </GodSectionInfo>
         </GodSection>
     )
@@ -226,19 +246,25 @@ const SeccionEko = () =>{
             <GodSectionInfo>
                 <div className="texto col-3">
                     <h3 className="h5 colored">Seguidores de {god}</h3>
-                    <p className="colored">Los seguidores de Eko priorizan sus vínculos con otros seres por sobre todo lo demás, ellos dedican su vida a buscar y proteger otros con los cuales sobrevivir.</p>
-                    <p>Al centrarse en la sobrevivencia del grupo, ellos desarrollan un fuerte sentido de la justicia ya que creen que orden de mantener la estabilidad de grupo es importante que cada individuo de este sea tratado igual.</p>
-                    <h4 className="h6 colored">Iglesias de {god}</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo sequi, culpa nesciunt quaerat, sapiente dignissimos, laudantium accusamus impedit deserunt qui ipsum voluptatum est. Commodi, aliquid ducimus. Numquam similique recusandae ex.</p>
-                    <h4 className="h6 colored">Convicciones</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore facere, laudantium esse consequatur maxime odit quibusdam ducimus ea. Quisquam esse eius voluptatibus nesciunt eveniet quos odit a animi totam.</p>
+                    <p className="colored">Los seguidores de Alana creen en encontrar la felicidad a través de romper las cadenas que aprisionan tu espíritu sean reales o metafóricas. Creen que en el mundo todos nacen libres y hasta que vendemos nuestra libertad por nuestra seguridad pero es nuestro deber el encontrarla una vez mas y reclamarla para encontrar nuestro verdadero potencial. </p>
+                    <p>Puede parecer que los seguidores de Alana solo se preocupan por sus propios deseos, y algunos lo hacen, pero la mayoría de seguidores tienen un fuerte sentido de comunidad, ayudando a personas desamparadas y luchando contra la opresión de sectores de la sociedad. En el mundo ideal de los que siguen Alana, nadie esta por encima de los otro y todos cuentan con las mismas oportunidades para luchar por si mismo.</p>
+                    <p>Alana ayuda a aquellos que luchan por su libertad y la de los demás, aquellos que luchan por su sueños y los que inspiran los corazones de la gente que los rodea. En la religión de Alana todos son bienvenidos, no hay reglas ni condiciones, tu único deber es encontrar lo que te hace sentir libre.</p>
+                    <p>La fe a Alana se profesa a través del arte, ya sea a través de espectáculos en sus templo o por devotos viajeros que llevan su música y sus obras a donde la gente necesite escucharla. </p>
+                    <h4 className="h6 colored">Templos de {god}</h4>
+                    <p>Los templos de Alana son los menos constantes de todos los templos, a menudo simulando una amalgama de distintos edificios puestos en un solo, combinando distintos estilos artísticos y materiales que de alguna forma tienen sentido juntos. La mayoría de los templos suelen ser humildes en su interior con suelos de tierra cubierto de alfombras pero con sus paredes y pasillos cubiertos hasta el techo de piezas de arte, telas, vidríales y artesanías. Cualquiera puede tomar o poner cualquier cosa en el templo mientras no lo dañe, y esta norma convierte a los Templos de Alana en un canal de expresión para la comunidad a la que sirve. </p>
+                    <p>Cada Templo cuenta con escenario donde un sacerdote cumple el rol de director y tiene su propio acto en que participan los demás miembros del templo y voluntarios de la comunidad. Los miembros del templo colaboran para evitar robos y violencia dentro del templo, a menudo dando dinero y trabajo a quien lo necesite.</p>
                 </div>
-                <GodSectionVotos>
-                    <p><b>Bueno</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Malvado</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Legal</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                    <p><b>Caótico</b><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis asperiores </p>
-                </GodSectionVotos>
+                <div className="texto col-3">
+                    <h4 className="h6 colored">Convicciones</h4>
+                    <h4 className="h6">Expresión y Libertad</h4>
+                    <p>Para Alana la libertad de vivir es lo mas importante, como seguidor deberás buscar aquellas cosas que te retienen de ser tu mismo y combatirlas. Tu voz fue hecha para ser escuchada, tus manos se hicieron para crear, tu expresión es la la huella que dejas en mundo, es testimonio de tu vida y tus creencias, y uno no puede aprender crecer si antes no construye un reflejo de si mismo.</p>
+                    <GodSectionVotos>
+                        <p><b>Bueno</b><br/>Mi enemigo es la opresión y luchare pues soy mas de lo que pueden quitarme, mi libertad esta en el bienestar de los que comparten su mundo con los demás. </p>
+                        <p><b>Legal</b><br/>Ninguna voz debe ser forzada a silenciarse, Ninguna alma debe ser encerrada. Defenderé la libertad hasta del que no la merezca. </p>
+                        <p><b>Caótico</b><br/>Nadie pondrá cadenas sobre mi ni decidirá mi destino, en mi rebeldía se me mostrara mi verdadero ser, en mi debilidad no me arrodillare ante nadie. </p>
+                        <p><b>Malvado</b><br/>El mundo fue hecho para que persiga mis deseos, en mi libertad conquistare lo inalcanzable y ninguna palabra tendrá poder sobre mi. </p>
+                    </GodSectionVotos>
+                </div>
             </GodSectionInfo>
         </GodSection>
     )

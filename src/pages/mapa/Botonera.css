@@ -25,3 +25,8 @@
     transform: scale(1.2);
     transform-origin: 29% 75%;
 }
+@media (orientation: portrait) {
+    .Botonera{
+        display: none;
+    }
+}

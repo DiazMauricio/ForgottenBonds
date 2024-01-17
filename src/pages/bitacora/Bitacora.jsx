@@ -5,6 +5,7 @@ import NavBar from "../../components/navBar/NavBar";
 import MapaLaiss from "../../components/svg/MapaLaiss";
 import Compas from "../../components/svg/Compas";
 import MapaMarkers from "../../components/svg/MapaMarkers";
+import MapController from "../mapa/MapController";
 
 const defaultViewBox = {
     x:1527, 
@@ -33,11 +34,11 @@ const Bitacora = () => {
         <>
         <NavBar pagina={6}/>
          <div className={"MapaPage active"}>
-            <div className="Map-container">
+            <MapController vBox={vBox} useVBox={useVBox} btns={false}>
                 <Compas/>
                 <MapaMarkers vbox={vBox} MarkerClass={Registros[registro].MarkerClass}/>
                 <MapaLaiss vbox={vBox}/>
-            </div>
+            </MapController>
             <HalfPageContainer Content={Registros[registro].registro} ChangeContent={ChangeContent}/>
          </div>
         </>

@@ -17,7 +17,6 @@ export default Home;
 const Header = () => {
     return ( 
         <div className="header background">
-            <div className="grid">
                 <div className="conteiner">
                     <Logo version="v2"/>
                     <p className="h6">Escenario de campaña</p>
@@ -30,30 +29,31 @@ const Header = () => {
                         </svg>
                     </div>
                 </div>
-            </div>
         </div>
      );
 }
 
 const Trama = () => {
     return ( 
-        <div className="trama grid">
+        <div className="trama ">
             <h1 className="h2">Trama</h1>
-            <div className="text1">
-                <p>
-                    El Reino de Laiss, es una tierra plagada de diferentes culturas y costumbres, pero si hay algo que todos sus habitantes comparten es su respeto por sus leyendas. Este reino se fundo por héroes y durante su historia siempre fueron las proezas de sus individuos las que lo mantuvieron en pie.
-                </p>
-                <p>
-                    Hoy en dia, el reino se encuentra en una situación peligrosa. Todavía recuperándose de las cicatrices dejadas por 45 años de guerra civil, y con un Rey que tuvo que tomar el trono antes de tener edad para tomar una espada, encuentra la sombra de una nueva amenaza.
-                </p>
+            <div className="trama-container grid">
+                <div className="text">
+                    <p>
+                        El Reino de Laiss, es una tierra plagada de diferentes culturas y costumbres, pero si hay algo que todos sus habitantes comparten es su respeto por sus leyendas. Este reino se fundo por héroes y durante su historia siempre fueron las proezas de sus individuos las que lo mantuvieron en pie.
+                    </p>
+                    <p>
+                        Hoy en dia, el reino se encuentra en una situación peligrosa. Todavía recuperándose de las cicatrices dejadas por 45 años de guerra civil, y con un Rey que tuvo que tomar el trono antes de tener edad para tomar una espada, encuentra la sombra de una nueva amenaza.
+                    </p>
 
-            </div>
-            <div className="img1"/>
-            <div className="img2"/>
-            <div className="text2">
-                <p>
-                    El Imperio Amaten, se prepara para agrandar sus fronteras y Laiss es una de sus prioridades. Pero el mismo tratado que puso fin a las guerras civiles previene que el Rey pueda hacer un llamado a la guerra sin el consentimiento de los gobernantes de las ciudades. El actual rey no tiene la influencia suficiente para convencerlos, pero quizá, una nueva fabula heroica sea capaz de unir las ciudades como lo sucedió en antaño. Al menos, antes de que la fuerzas del imperio asomen en las costas del Reino.
-                </p>
+                </div>
+                <div className="img1"/>
+                <div className="text">
+                    <p>
+                        El Imperio Amaten, se prepara para agrandar sus fronteras y Laiss es una de sus prioridades. Pero el mismo tratado que puso fin a las guerras civiles previene que el Rey pueda hacer un llamado a la guerra sin el consentimiento de los gobernantes de las ciudades. El actual rey no tiene la influencia suficiente para convencerlos, pero quizá, una nueva fabula heroica sea capaz de unir las ciudades como lo sucedió en antaño. Al menos, antes de que la fuerzas del imperio asomen en las costas del Reino.
+                    </p>
+                </div>
+                <div className="img2"/>
             </div>
         </div>
     );

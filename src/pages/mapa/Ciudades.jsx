@@ -21,8 +21,17 @@ const PasoPesado = () => {
     return ( 
         <>
             <h1 className="h3">Paso Pesado</h1>
-            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.
-</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
+            <p>Paso pesado más que una ciudad es una extensa red de comunidades desperdigadas en una gigantesca ciénaga. Su habitantes son conocidos por ser calmados y amigables, disfrutando de los vastos recursos del pantano y se enorgullecen de vivir en comunión con su ambiente.</p>
         </>
      );
 }

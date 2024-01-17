@@ -33,6 +33,13 @@
     flex: 1;
     min-width: min(500px, 100%);
 }
+.GodSection-header-name{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .GodSection-header .BordeDeidad{
     position: absolute;
     bottom: 0;

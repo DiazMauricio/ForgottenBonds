@@ -29,7 +29,6 @@
     cursor:pointer;
     background-color: var(--surface-default);
     overflow: hidden;
-
 }
 .toggleBtn:hover{
     background-color: var(--surface-dark);
@@ -83,4 +82,27 @@
     position: absolute;
     width: 30em;
     top: -3em;
+}
+
+@media (orientation: portrait) {
+    .MapaPage{
+        height: auto;
+        overflow:auto;
+    }
+    .active > .controller-container{
+        width: 100%;
+    }
+    .controller-container > .toggleBtn{
+        display: none;
+    }
+    .Compas{
+        display: none;
+    }
+    .LaissShield{
+        max-height: 80%;
+    }
+    .controller-container{
+        height: auto;
+        cursor: all-scroll;
+    }
 }
